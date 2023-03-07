@@ -178,7 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
           AppLocalizations.of(context).translate('login_btn_forgot_password'),
           style: Theme.of(context)
               .textTheme
-              .caption
+              .bodySmall
               ?.copyWith(color: Colors.orangeAccent),
         ),
         onPressed: () {},
@@ -190,7 +190,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return RoundedButtonWidget(
       buttonText: AppLocalizations.of(context).translate('login_btn_sign_in'),
       buttonColor: Colors.orangeAccent,
-      textColor: Colors.white,
+      textColor: Colors.orangeAccent,
       onPressed: () async {
         if (_store.canLogin) {
           DeviceUtils.hideKeyboard(context);
